@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .con{
+            width:300px;
+            height:300px;
+            border:1px solid black;
+            margin:50px auto;
+
+            /* 将父级设置为相对定位,不设置偏移值,父级就有定位属性了,
+            而且不移动,子级就可以相对于它来做绝对定位 */
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .box01,.box02,.box03,.box04{
+            width:200px;
+            height:80px;
+            margin:10px;
+        }
+
+        .box01{
+            background: lightgreen;
+            /* position: relative;     设置相对定位属性 */
+            /* left:50px;    设置偏移量,相对自己原位置偏移,原位置保留,父级不能为相对定位 */
+            /* top:50px; */
+
+        }
+        
+        .box02{
+            background: lightblue;
+            position: absolute;     /* 设置绝对定位属性,需要一个有定位元素的父级,否则就一直往上相对body */
+            left:50px;    /*设置偏移量,相对父级偏移,原位置不保留*/
+            top:50px;
+        }
+        
+        .box03{
+            background: rgb(236, 119, 119);
+        }
+
+        .box04{
+            background: lightgoldenrodyellow;
+            position: fixed;
+            /* 设置固定定位 */
+            left:50px;    /*设置偏移量,相对浏览器偏移,原位置不保留*/
+            top:300px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="box01">
+            1
+        </div>
+
+        <div class="box02">
+            2
+        </div>
+
+        <div class="box03">
+            3
+        </div>
+
+        <div class="box04">
+            4
+        </div>
+
+    </div>
+</body>
+</html>

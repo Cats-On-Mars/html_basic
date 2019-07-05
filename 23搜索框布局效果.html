@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .search_form{
+            width:602px;
+            height:42px;
+            margin:200px auto;
+        }
+        .box1{
+            width:500px;
+            height:40px;
+            border:1px solid #0fad10;
+
+            /* 清除输入框默认padding值 */
+            padding:0px;
+
+            /* 通过浮动float解决内联元素默认间距以及基线对齐的问题 */
+            float:left;
+
+            /* 让文字缩进 */
+            text-indent: 10px;
+            font-size: 18px;
+
+            /* 设置input框获得焦点时,是否显示凸显的框线 */
+            outline:none;
+            
+        }
+        .box2{
+            width:100px;
+            height:42px;
+            background: #0fad10;
+            font-size:18px;
+            color: white;
+            /* 去掉按钮默认的边框 */
+            border:0px;
+            /* 通过浮动float解决内联元素默认间距以及基线对齐的问题 */
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <form class="search_form" action="https://www.baidu.com/s">
+        <!-- 设置输入框默认的提示文字,用placeholder属性 -->
+        <input type="text" class="box1" placeholder="请输入搜索内容" name="wd">
+        <input type="submit" value="搜索" class="box2">   
+    </form>
+</body>
+</html>

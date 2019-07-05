@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .box{
+            width:100px;
+            height:100px;
+            background: gold;
+        }
+        /* 伪类选择器权重为10 */
+        /* 定义伪类选择器,就是鼠标放上去之后的状态 */
+        .box:hover{
+            width:150px;
+            height:150px;  /*变大会把其他东西撑开,一般不做这种效果*/
+            background: red;
+        }
+
+        .link01{
+            text-decoration: none;
+            color:black;
+        }
+
+        .link01:hover{
+            color:red;
+
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <br>
+    <br>
+    <br>
+    <a href="#" class="link01">这是一个链接</a>
+</body>
+</html>
